@@ -1555,7 +1555,7 @@ public class MainActivity extends AppCompatActivity
     //от разрабов
     public void fromDevelopers() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://play.google.com/store/apps/developer?id=Yurka+Sergeant+Matatov"));
+        intent.setData(Uri.parse("https://play.google.com/store/search?q=Yury%20Matatov&c=apps&hl"));
         startActivity(intent);
     }
 

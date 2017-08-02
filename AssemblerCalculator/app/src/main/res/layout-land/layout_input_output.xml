@@ -270,7 +270,7 @@
                     android:layout_column="0"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:background="@drawable/big"
+                    android:background="@drawable/big_btn"
                     android:onClick="onClickEqual"
                     android:text="="
                     android:textColor="@color/colorGold" />
@@ -282,7 +282,7 @@
                     android:layout_column="1"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:background="@drawable/big"
+                    android:background="@drawable/big_btn"
                     android:text="C"
                     android:textColor="@color/colorRed" />
             </LinearLayout>
