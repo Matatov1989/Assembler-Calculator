@@ -29,6 +29,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Gallery;
 import android.widget.ImageView;
+import android.widget.SlidingDrawer;
 import android.widget.TextView;
 
 import static java.lang.System.exit;
@@ -37,7 +38,7 @@ import static java.lang.System.exit;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
- //   final String LOG_TAG = "myLogs";
+    final String LOG_TAG = "myLogs";
 
     TextView textNums;
     TextView hexRes;
@@ -122,6 +123,8 @@ public class MainActivity extends AppCompatActivity
     // adapter for gallery view
     private ImageAdapter adapter;
 
+    private SlidingDrawer slidingDrawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,6 +149,8 @@ public class MainActivity extends AppCompatActivity
         btnDec = (Button) findViewById(R.id.btnDec);
         btnBin = (Button) findViewById(R.id.btnBin);
         btnOct = (Button) findViewById(R.id.btnOct);
+
+        slidingDrawer = (SlidingDrawer) findViewById(R.id.drawerSliding);
 
         if (savedInstanceState != null) {
             String temp = savedInstanceState.getString(KEY_TEXT_NUMS, "");
@@ -341,8 +346,10 @@ public class MainActivity extends AppCompatActivity
         btnNot.setOnClickListener(this);
     }
 
+    //логические кнопки в правой выдвижной панели
     @Override
     public void onClick(View v) {
+        slidingDrawer.animateClose();
         Button b = (Button) v;
         switch (b.getId()) {
             case R.id.btnXor:
@@ -901,21 +908,39 @@ public class MainActivity extends AppCompatActivity
         minus2 = "";
     }
 
+    private void setTypeFlag(){
+
+        if (strNum1.contains("A") ||  strNum1.contains("B") ||  strNum1.contains("C") ||  strNum1.contains("D") ||  strNum1.contains("E") ||  strNum1.contains("F"))
+        {
+            typeFlag = 16;
+        }
+        else if ( strNum1.contains("8") ||  strNum1.contains("9")){
+            typeFlag = 10;
+        }
+        else if ( strNum1.contains("2") || strNum1.contains("3") ||  strNum1.contains("4") ||  strNum1.contains("5") ||  strNum1.contains("6") ||  strNum1.contains("7")){
+            typeFlag = 8;
+        }
+        else if ( strNum1.contains("0") ||  strNum1.contains("1"))
+        {
+            typeFlag = 2;
+        }
+    }
+
     public void onClickEqual(View v) {
         fromAnswerToText();
         directAnswer();
-        setSpannable(textNums.getText().toString());
-        str = "";
         mySing = "";
-        typeFlag = 0;
-        strNum1 = "";
+        setTypeFlag();
         strNum2 = "";
-        typeNum1 = "";
+     //   typeNum1 = "d";
         typeNum2 = "";
         typeNum = "d";
         lenNum = 0;
         minus1 = "";
         minus2 = "";
+        setColorBtnDec();
+
+        setSpannable(textNums.getText().toString());
     }
 
     public void directAnswer() {
@@ -1437,24 +1462,19 @@ public class MainActivity extends AppCompatActivity
         adb.setCancelable(true);
         adb.setView(view);
         dialog = adb.show();
-
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         if (resultCode == RESULT_OK) {
             // check if we are returning from picture selection
             if (requestCode == PICKER) {
-
                 // the returned picture URI
                 Uri pickedUri = data.getData();
-
                 // declare the bitmap
                 Bitmap pic = null;
                 // declare the path string
                 String imgPath = "";
-
                 // retrieve the string using media data
                 String[] medData = {MediaStore.Images.Media.DATA};
                 // query the data
@@ -1468,23 +1488,17 @@ public class MainActivity extends AppCompatActivity
                     imgPath = picCursor.getString(index);
                 } else
                     imgPath = pickedUri.getPath();
-
                 // if and else handle both choosing from gallery and from file
                 // manager
-
                 // if we have a new URI attempt to decode the image bitmap
                 if (pickedUri != null) {
-
                     // set the width and height we want to use as maximum
                     // display
                     int targetWidth = 600;
                     int targetHeight = 400;
-
                     // sample the incoming image to save on memory resources
-
                     // create bitmap options to calculate and use sample size
                     BitmapFactory.Options bmpOptions = new BitmapFactory.Options();
-
                     // first decode image dimensions only - not the image bitmap
                     // itself
                     bmpOptions.inJustDecodeBounds = true;
@@ -1512,19 +1526,14 @@ public class MainActivity extends AppCompatActivity
                     }
                     // use the new sample size
                     bmpOptions.inSampleSize = sampleSize;
-
                     // now decode the bitmap using sample options
                     bmpOptions.inJustDecodeBounds = false;
-
                     // get the file as a bitmap
                     pic = BitmapFactory.decodeFile(imgPath, bmpOptions);
-
                     // pass bitmap to ImageAdapter to add to array
                     adapter.addPic(pic);
-
                     // redraw the gallery thumbnails to reflect the new addition
                     myGallery.setAdapter(adapter);
-
                     // display the newly selected image at larger size
                     bigimage.setImageBitmap(pic);
                     // scale options
@@ -1563,9 +1572,16 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+
+        if (drawer.isDrawerOpen(GravityCompat.START) && !slidingDrawer.isOpened())
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        else if (slidingDrawer.isOpened() && !drawer.isDrawerOpen(GravityCompat.START))
+            slidingDrawer.animateClose();
+        else if (drawer.isDrawerOpen(GravityCompat.START) && slidingDrawer.isOpened()) {
+            drawer.closeDrawer(GravityCompat.START);
+            slidingDrawer.animateClose();
+        }
+        else {
             super.onBackPressed();
             moveTaskToBack(true);
             exit(0);

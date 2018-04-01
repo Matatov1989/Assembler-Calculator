@@ -10,7 +10,7 @@
     tools:context="com.yurka.sergeant_matatov.assemblercalculator.MainActivity">
 
     <SlidingDrawer
-        android:id="@+id/drawer"
+        android:id="@+id/drawerSliding"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:content="@+id/content"
