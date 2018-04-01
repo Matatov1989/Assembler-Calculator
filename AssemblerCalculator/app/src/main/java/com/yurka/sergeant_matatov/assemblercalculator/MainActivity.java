@@ -1,4 +1,4 @@
-package com.yurka.sergeant_matatov.assemblercalculator;
+﻿package com.yurka.sergeant_matatov.assemblercalculator;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
