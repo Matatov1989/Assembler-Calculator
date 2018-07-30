@@ -42,7 +42,7 @@
                     android:id="@+id/btnXor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/all_nums_sings"
+                    android:background="@drawable/gradient_btn"
                     android:text="XOR"
                     android:textColor="@color/colorGold" />
 
@@ -50,7 +50,7 @@
                     android:id="@+id/btnOr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/all_nums_sings"
+                    android:background="@drawable/gradient_btn"
                     android:text="OR"
                     android:textColor="@color/colorGold" />
             </LinearLayout>
@@ -66,7 +66,7 @@
                     android:id="@+id/btnAnd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/all_nums_sings"
+                    android:background="@drawable/gradient_btn"
                     android:text="AND"
                     android:textColor="@color/colorGold" />
 
@@ -74,7 +74,7 @@
                     android:id="@+id/btnNot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/all_nums_sings"
+                    android:background="@drawable/gradient_btn"
                     android:text="NOT"
                     android:textColor="@color/colorGold" />
 

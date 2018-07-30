@@ -36,34 +36,45 @@
                 android:id="@+id/btnXor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/all_nums_sings"
-                android:onClick="onClickXor"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
                 android:text="XOR"
-                android:textColor="@color/colorGold" />
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle"
+                android:textAppearance="?android:textAppearanceMedium"/>
 
             <Button
                 android:id="@+id/btnOr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/all_nums_sings"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
                 android:text="OR"
-                android:textColor="@color/colorGold" />
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle"
+                android:textAppearance="?android:textAppearanceMedium"/>
 
             <Button
                 android:id="@+id/btnAnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/all_nums_sings"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
                 android:text="AND"
-                android:textColor="@color/colorGold" />
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle"
+                android:textAppearance="?android:textAppearanceMedium"/>
 
             <Button
                 android:id="@+id/btnNot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/all_nums_sings"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
                 android:text="NOT"
-                android:textColor="@color/colorGold" />
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle"
+                android:textAppearance="?android:textAppearanceMedium"/>
 
         </LinearLayout>
     </SlidingDrawer>

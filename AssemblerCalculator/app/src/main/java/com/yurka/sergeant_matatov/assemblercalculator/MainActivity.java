@@ -1,4 +1,4 @@
-﻿package com.yurka.sergeant_matatov.assemblercalculator;
+package com.yurka.sergeant_matatov.assemblercalculator;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
-        // присвоим обработчик кнопке Clear (удерживание кнопки для полного очищения)
+        //button long press to clear all
         btnClear.setOnClickListener(listnerClear);
         btnClear.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -346,7 +346,7 @@ public class MainActivity extends AppCompatActivity
         btnNot.setOnClickListener(this);
     }
 
-    //логические кнопки в правой выдвижной панели
+    //buttons logic, sliding panel right side
     @Override
     public void onClick(View v) {
         slidingDrawer.animateClose();
@@ -394,7 +394,7 @@ public class MainActivity extends AppCompatActivity
         outState.putInt(KEY_TEXT_VIEW_FLAF, textViewFlag);
     }
 
-    //с ответа в строчку
+    //from answear to textview
     public void fromAnswerToText() {
         if (!decRes.getText().toString().isEmpty()) {
             allClear();
@@ -461,7 +461,7 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
-        //если два числа
+        //if two numbers
         if (singFlag == 1) {
             if (len == 0) {
                 if (chLast == '-' && chFirst == '*' || chLast == '-' && chFirst == '/') {
