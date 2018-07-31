@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity
     private static final String KEY_SING_FLAG = "SING_FLAG";
     private static final String KEY_TEXT_VIEW_FLAF = "TEXT_VIEW_FLAF";
 
-    SharedPreferences cntCommentPref;    //для диалогового окна
+    SharedPreferences cntCommentPref;    //for dialog add comment
     final String SAVED_CNT_COMMENT = "saved_cnt_comment";
 
     Dialog dialog;
@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity
         if (!str.equals("0") && strCnt.equals("40"))
             dialogComment(strCnt);
 
-        // создаем обработчик нажатия (просто нажатие, удаление по одному символу)
+        // remove char from 'textNums' one by one revers
         View.OnClickListener listnerClear = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -335,6 +335,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        // logic buttons
         btnXor = (Button) findViewById(R.id.btnXor);
         btnOr = (Button) findViewById(R.id.btnOr);
         btnAnd = (Button) findViewById(R.id.btnAnd);
@@ -496,6 +497,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //clear all input & output
     public void allClear() {
         binRes.setText("");
         hexRes.setText("");
@@ -519,9 +521,11 @@ public class MainActivity extends AppCompatActivity
         one = -1;
         two = -1;
 
+        //restart colors buttons
         setColorGrayAllButtons();
     }
 
+    /* ALL BUTTONS */
     public void onClickHex(View v) {
         if (typeFlag == 0 || typeFlag == 2 || typeFlag == 8 || typeFlag == 10 || typeFlag == 16) {
             if (singFlag == 0)
@@ -908,31 +912,13 @@ public class MainActivity extends AppCompatActivity
         minus2 = "";
     }
 
-    private void setTypeFlag(){
-
-        if (strNum1.contains("A") ||  strNum1.contains("B") ||  strNum1.contains("C") ||  strNum1.contains("D") ||  strNum1.contains("E") ||  strNum1.contains("F"))
-        {
-            typeFlag = 16;
-        }
-        else if ( strNum1.contains("8") ||  strNum1.contains("9")){
-            typeFlag = 10;
-        }
-        else if ( strNum1.contains("2") || strNum1.contains("3") ||  strNum1.contains("4") ||  strNum1.contains("5") ||  strNum1.contains("6") ||  strNum1.contains("7")){
-            typeFlag = 8;
-        }
-        else if ( strNum1.contains("0") ||  strNum1.contains("1"))
-        {
-            typeFlag = 2;
-        }
-    }
-
     public void onClickEqual(View v) {
         fromAnswerToText();
         directAnswer();
         mySing = "";
         setTypeFlag();
         strNum2 = "";
-     //   typeNum1 = "d";
+        //   typeNum1 = "d";
         typeNum2 = "";
         typeNum = "d";
         lenNum = 0;
@@ -943,6 +929,19 @@ public class MainActivity extends AppCompatActivity
         setSpannable(textNums.getText().toString());
     }
 
+    //flag for types input number
+    private void setTypeFlag(){
+        if (strNum1.contains("A") ||  strNum1.contains("B") ||  strNum1.contains("C") ||  strNum1.contains("D") ||  strNum1.contains("E") ||  strNum1.contains("F"))
+            typeFlag = 16;
+        else if ( strNum1.contains("8") ||  strNum1.contains("9"))
+            typeFlag = 10;
+        else if ( strNum1.contains("2") || strNum1.contains("3") ||  strNum1.contains("4") ||  strNum1.contains("5") ||  strNum1.contains("6") ||  strNum1.contains("7"))
+            typeFlag = 8;
+        else if ( strNum1.contains("0") ||  strNum1.contains("1"))
+            typeFlag = 2;
+    }
+
+    //output all answers (hex, dec, oct, bin)
     public void directAnswer() {
         Result result = new Result();
         int res = 0;
@@ -998,6 +997,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /* switch status to input number */
     public void addHex(String ch) {
         if (singFlag == 0 && strNum1.length() < 8) {
             if (strNum1.length() == 0 && minus1.length() == 0) {
@@ -1191,7 +1191,7 @@ public class MainActivity extends AppCompatActivity
         textNums.setText(str + typeNum);
     }
 
-    //цветные буквы
+    //colorfull chars цветные буквы
     public void setSpannable(String str) {
         if (str.indexOf("+") != -1 && one != -1 || str.indexOf("-") != -1 && one != -1 || str.indexOf("*") != -1 && one != -1 || str.indexOf("/") != -1 && one != -1 || str.indexOf("^") != -1 && one != -1 || str.indexOf("|") != -1 && one != -1 || str.indexOf("&") != -1 && one != -1) {
 
@@ -1242,6 +1242,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /* switch color to button (input number) */
     public void setColorGrayAllButtons() {
         btnHex.setTextColor(getResources().getColor(R.color.colorGray));
         btnDec.setTextColor(getResources().getColor(R.color.colorGray));
@@ -1278,7 +1279,7 @@ public class MainActivity extends AppCompatActivity
         btnHex.setTextColor(getResources().getColor(R.color.colorGray));
     }
 
-    //диалог на запрос оценки
+    //dialog for comment on market
     public void dialogComment(String cnt) {
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setCancelable(false);   //нельзя
@@ -1305,7 +1306,7 @@ public class MainActivity extends AppCompatActivity
         dialog = adb.show();
     }
 
-    //диалог разрабов (лист)
+    //dialodg developers (list)
     public void dialogDevelopers() {
         final String[] developers = {getString(R.string.developer), getString(R.string.painter)};
         AlertDialog.Builder adb = new AlertDialog.Builder(this);
@@ -1329,19 +1330,19 @@ public class MainActivity extends AppCompatActivity
         dialog = adb.show();
     }
 
-    //отправка электронки для разрабов
+    //send mail to select developer
     public void sendMailForDev(String mailAdres) {
         final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         emailIntent.setType("plain/text");
-        // Кому
+        // receiver
         emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{mailAdres.toString()});
-        // тема
+        // title
         emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.app_name));
-        // отправка!
+        // send!
         startActivity(Intent.createChooser(emailIntent, getString(R.string.toastSendMail)));
     }
 
-    //сохраняет каунт для диалога на запрос с оценкой
+    //send count for dialog on comment to market
     public void saveCntForDialogComment(String cnt) {
         cntCommentPref = getSharedPreferences("cnt comment", MODE_PRIVATE);
         SharedPreferences.Editor ed = cntCommentPref.edit();
@@ -1349,7 +1350,7 @@ public class MainActivity extends AppCompatActivity
         ed.commit();
     }
 
-    //загружает каунт для диалога на запрос с оценкой
+    //load count for dialog on comment to market
     public String loadCntForDialogComment() {
         cntCommentPref = getSharedPreferences("cnt comment", MODE_PRIVATE);
         String cnt = cntCommentPref.getString(SAVED_CNT_COMMENT, "");
@@ -1365,7 +1366,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //диалог о программе
+    //dialog about program
     public void dialogAboutProgram() {
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setCancelable(false);   //нельзя
@@ -1392,7 +1393,7 @@ public class MainActivity extends AppCompatActivity
         dialog = adb.show();
     }
 
-    //диалог с таблицами логических операций
+    //dialog with logic tables
     public void dialogTablesLogicOperations() {
         final Integer[] mImage = {R.drawable.table_xor, R.drawable.table_or,
                 R.drawable.table_and, R.drawable.table_not};
@@ -1439,7 +1440,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                // Выводим номер позиции при щелчке на картинке из галереи
                 //       Toast.makeText(MainActivity.this, "Позиция: " + position, Toast.LENGTH_SHORT).show();
                 //       bigimage.setImageBitmap(adapter.getPic(position));
                 bigimage.setImageResource(mImage[position]);
@@ -1447,7 +1447,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    //диалог таблицы системы счисления
+    //dialog with system table
     public void dialogNumberSystemTable() {
         final Integer[] mImage = {R.drawable.dec_hex_bin_oct};
 
@@ -1545,14 +1545,14 @@ public class MainActivity extends AppCompatActivity
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    //оценить программу
+    //open application in market
     public void sendComment() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.yurka.sergeant_matatov.assemblercalculator&hl"));
         startActivity(intent);
     }
 
-    //посоветовать другу
+    //send link application on market to friend
     public void adviseFriend() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -1561,14 +1561,14 @@ public class MainActivity extends AppCompatActivity
         startActivity(sendIntent);
     }
 
-    //от разрабов
+    //open link all program in market
     public void fromDevelopers() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://play.google.com/store/search?q=Yury%20Matatov&c=apps&hl"));
         startActivity(intent);
     }
 
-    //выход
+    //button exit from program or clouse sliding
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

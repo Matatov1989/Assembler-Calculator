@@ -69,7 +69,7 @@ public class Result {
                     num1 = allFormats.fromBinToDex(strNum1);
                 if (typeNum2.equals("b"))
                     num2 = allFormats.fromBinToDex(strNum2);
-                //опредиляем математическое действие
+                //check math opiration  опредиляем математическое действие
                 if (mySing.equals("+"))
                     flagSing = 1;
                 if (mySing.equals("-"))
@@ -98,7 +98,7 @@ public class Result {
                     hex2 = allFormats.addF(hex2);
                     num2 = allFormats.fromHexToDex(hex2);
                 }
-                //выполняем математическое действие
+                //make math opiration выполняем математическое действие
                 switch (flagSing) {
                     case 1:
                         res = mathematicalOperations.operationPlus(num1, num2);
@@ -108,7 +108,7 @@ public class Result {
                         break;
                     case 3:
                         res = mathematicalOperations.operationMul(num1, num2);
-                        if (cntNums == 1)       //если одно числа отрицательные
+                        if (cntNums == 1)       //if one number with minus
                         {
                             hex1 = String.format("%X", res);
                             res = allFormats.mashlimLeShtaim(hex1);
@@ -118,8 +118,8 @@ public class Result {
                         }
                         break;
                     case 4:
-                        res = mathematicalOperations.operationDiv(num1, num2);     //деление
-                        if (cntNums == 1)       //если одно числа отрицательные
+                        res = mathematicalOperations.operationDiv(num1, num2);     //div
+                        if (cntNums == 1)       //if one number with minus
                         {
                             hex1 = String.format("%X", res);
                             res = allFormats.mashlimLeShtaim(hex1);

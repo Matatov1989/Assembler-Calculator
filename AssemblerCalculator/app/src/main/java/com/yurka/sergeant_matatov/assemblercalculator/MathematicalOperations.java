@@ -50,7 +50,7 @@ public class MathematicalOperations {
         } else
             resHexInt = Integer.toHexString(res);
 
-        //остаток
+        //module остаток
         if (sub > 15) {
             if (sub == 10)
                 resHexResidue = "a";

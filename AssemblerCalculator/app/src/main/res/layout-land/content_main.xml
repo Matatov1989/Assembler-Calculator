@@ -10,7 +10,8 @@
 
     <include layout="@layout/layout_buttons" />
 
+    <!--
     <include layout="@layout/sliding_panel_left" />
-
+-->
 </android.support.design.widget.CoordinatorLayout>
 

@@ -137,7 +137,7 @@ public class AllFormats {
         int resDec = 0;
 
         int cnt = 0;
-        //кол-во цифр в числе
+        //quantity numbers on number
         while (num != 0)
         {
             cnt++;
