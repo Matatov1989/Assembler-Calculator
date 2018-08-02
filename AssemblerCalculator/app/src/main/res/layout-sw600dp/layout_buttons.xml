@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btnHex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickHex"
+                android:text="Hex"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGray"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnDec"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickDex"
+                android:text="Dec"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGray"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnBin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickBin"
+                android:text="Bin"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGray"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnOct"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickOct"
+                android:text="Oct"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGray"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:text="C"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorRed"
+                android:theme="@style/stylePressBtnCircle" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickC"
+                android:text="C"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickD"
+                android:text="D"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickE"
+                android:text="E"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickF"
+                android:text="F"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnXor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:text="XOR"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick8"
+                android:text="8"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick9"
+                android:text="9"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickA"
+                android:text="A"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickB"
+                android:text="B"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnOr"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:text="OR"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick4"
+                android:text="4"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick5"
+                android:text="5"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick6"
+                android:text="6"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick7"
+                android:text="7"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/btnAnd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:text="AND"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick0"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick1"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick2"
+                android:text="2"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClick3"
+                android:text="3"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+
+            <Button
+                android:id="@+id/btnNot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:text="NOT"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorGold"
+                android:theme="@style/stylePressBtnCircle" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickPlus"
+                android:text="+"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickMinus"
+                android:text="-"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickMul"
+                android:text="*"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickDiv"
+                android:text="/"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:theme="@style/stylePressBtnCircle" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_circle"
+                android:onClick="onClickEqual"
+                android:text="="
+                android:textColor="@color/colorGold"
+                android:textSize="35sp"
+                android:theme="@style/stylePressBtnCircle" />
+
+
+        </TableRow>
+
+        <!--
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_btn_oval"
+                android:onClick="onClickEqual"
+                android:text="="
+                android:textColor="@color/colorGold"
+                android:textSize="35sp"
+                android:theme="@style/stylePressBtnOval" />
+
+        </TableRow>
+
+        -->
+    </TableLayout>
+</LinearLayout>

@@ -37,7 +37,6 @@ import static java.lang.System.exit;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-
     final String LOG_TAG = "myLogs";
 
     TextView textNums;
@@ -130,7 +129,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
 
-        ///     Log.d(LOG_TAG, "язык: " +getResources().getConfiguration().locale.getLanguage());
+        ///   Log.d(LOG_TAG, "язык: " +getResources().getConfiguration().locale.getLanguage());
 
         textNums = (TextView) findViewById(R.id.textNums);
 
@@ -345,12 +344,16 @@ public class MainActivity extends AppCompatActivity
         btnOr.setOnClickListener(this);
         btnAnd.setOnClickListener(this);
         btnNot.setOnClickListener(this);
+
     }
 
     //buttons logic, sliding panel right side
     @Override
     public void onClick(View v) {
-        slidingDrawer.animateClose();
+
+        if (slidingDrawer != null)
+            slidingDrawer.animateClose();
+
         Button b = (Button) v;
         switch (b.getId()) {
             case R.id.btnXor:
@@ -407,6 +410,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //after clear all numbers
     public String afterClearNums(String strClear) {
         int len = strClear.length();
         int index = 0;
@@ -983,11 +987,12 @@ public class MainActivity extends AppCompatActivity
                     cntPoint++;
                 }
                 strResBin = strResBin.replaceFirst("^0*", "");
-                if (strResBin.length() >= 20)
-                    binRes.setTextSize(12);
+
+                if (strResBin.length() == 0)
+                    binRes.setText("0");
                 else
-                    binRes.setTextSize(20);
-                binRes.setText(strResBin);
+                    binRes.setText(strResBin);
+
             }
         } else if (strNum1.equals("")) {
             decRes.setText("");
