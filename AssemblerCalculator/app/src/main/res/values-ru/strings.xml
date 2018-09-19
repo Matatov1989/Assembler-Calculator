@@ -1,44 +1,23 @@
 <resources>
     <string name="app_name">Ассемблер Калькулятор</string>
 
-    <string name="action_settings">Settings</string>
-
     <string name="check">Больше не показывать.</string>
 
-    <!--buttons action bar -->
-    <string name="actionBtnInstructions">Инструкция</string>
-    <string name="actionBtnOfProgramm">О программе</string>
-    <string name="actionBtnFromDeveloper">Еще от разработчиков</string>
-    <string name="actionBtnAdviseFriend">Посоветовать друзьям</string>
-
-
-    <string name="dialogCommentStr">Если Вам нравится пользоваться этой программой, пожалуйста оцените ее в google play market. Спасибо!</string>
-    <string name="dialogTitleTables">Таблицы основных логических операций</string>
-
+    <!--buttons-->
+    <string name="btnCancel">Отмена</string>
+    <string name="btnOK">OK</string>
     <string name="btnRemind">Напомнить позже</string>
     <string name="btnNotRemind">Больше не напоминать</string>
 
-    <string name="strAboutProgram">\tПриложение предназначено для компьютерных вычисление, в котором можно складывать, вычитать, умножать и делить десятичные, шестнадцатеричные, восьмеричные и двоичные числа. В конце числа стоит соответствующая буква обозначающая тип вводимого числа.\n
-    \tОбозначения типов чисел:\n
-    \t\t<b>b</b> – двоичное;\n
-    \t\t<b>o</b> – восьмеричное;\n
-    \t\t<b>d</b> – десятичное;\n
-    \t\t<b>h</b> – шестнадцатеричное;\n
-    \tМатематические действия можно производить, как и для одного, так и для разных типов чисел. Результат выводится в четырех вариантах, в: десятичной, шестнадцатеричной, восьмеричной и двоичной системах счисления. В панели навигации предусмотрен выбор вывода ответов.\n
-    \tКроме математических действий предусмотрены и логические действия <b>XOR</b>, <b>OR</b>, <b>AND</b> и <b>NOT</b>.\n
-    \tВ панели навигации, кроме инструкции, в помощь есть таблицы логических операций и таблица систем счисления.\n
-    \n\tЕсли приложение Вам понравилось, пожалуйста, оцените его в Google Play и посоветуйте своим друзьям.\n\tСпасибо за поддержку, и приятного использования!\n</string>
-
-    <string name="btnEstimate">Оценить</string>
-    <string name="btnCancel">Отмена</string>
-
+    <!--navigation buttons-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="navBtnAdviseFriend">Посоветовать друзьям</string>
     <string name="navBtnFromDevelopers">Еще от разработчиков</string>
-    <string name="navBtnAboutProgram">О программе</string>
-
+    <string name="navBtnManual">Инструкция</string>
+    <string name="navBtnDevelopers">Разработчики</string>
+    <string name="navBtnFeedback">Оценить</string>
+    <string name="navBtnDonations">Внести Пожертвования</string>
     <string name="navDrawerTitle">Приятного использования</string>
     <string name="navigationTitle">Системы счисления:</string>
     <string name="navDrawerItemCommunication">Коммуникация</string>
@@ -49,10 +28,27 @@
     <string name="navBtnTablesLogicOperations">логические операции</string>
     <string name="navBtnNumberSystemTable">таблица систем счисления</string>
 
-    <string name="developers">Разработчики</string>
+    <!--names-->
     <string name="developer">Разработчик Мататов Юрий</string>
     <string name="painter">Художник Мататов Никита</string>
 
+    <!--toast-->
     <string name="toastSendMail">Отправка письма...</string>
+
+    <!--text-->
+    <string name="textVersion">Версия: 4.6</string>
+    <string name="textCommentStr">Если Вам нравится пользоваться этой программой, пожалуйста оцените ее в google play market. Спасибо!</string>
+    <string name="textTitleTables">Таблицы основных логических операций</string>
+    <string name="textAboutProgram">\tПриложение предназначено для компьютерных вычисление, в котором можно складывать, вычитать, умножать и делить десятичные, шестнадцатеричные, восьмеричные и двоичные числа. В конце числа стоит соответствующая буква обозначающая тип вводимого числа.\n
+    \tОбозначения типов чисел:\n
+    \t\t<b>b</b> – двоичное;\n
+    \t\t<b>o</b> – восьмеричное;\n
+    \t\t<b>d</b> – десятичное;\n
+    \t\t<b>h</b> – шестнадцатеричное;\n
+    \tМатематические действия можно производить, как и для одного, так и для разных типов чисел. Результат выводится в четырех вариантах, в: десятичной, шестнадцатеричной, восьмеричной и двоичной системах счисления. В панели навигации предусмотрен выбор вывода ответов.\n
+    \tКроме математических действий предусмотрены и логические действия <b>XOR</b>, <b>OR</b>, <b>AND</b> и <b>NOT</b>.\n
+    \tВ панели навигации, кроме инструкции, в помощь есть таблицы логических операций и таблица систем счисления.\n
+    \n\tЕсли приложение Вам понравилось, пожалуйста, оцените его в Google Play и посоветуйте своим друзьям.\n\tСпасибо за поддержку, и приятного использования!\n</string>
+
 
 </resources>

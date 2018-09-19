@@ -31,6 +31,7 @@ import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.SlidingDrawer;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static java.lang.System.exit;
 
@@ -934,14 +935,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     //flag for types input number
-    private void setTypeFlag(){
-        if (strNum1.contains("A") ||  strNum1.contains("B") ||  strNum1.contains("C") ||  strNum1.contains("D") ||  strNum1.contains("E") ||  strNum1.contains("F"))
+    private void setTypeFlag() {
+        if (strNum1.contains("A") || strNum1.contains("B") || strNum1.contains("C") || strNum1.contains("D") || strNum1.contains("E") || strNum1.contains("F"))
             typeFlag = 16;
-        else if ( strNum1.contains("8") ||  strNum1.contains("9"))
+        else if (strNum1.contains("8") || strNum1.contains("9"))
             typeFlag = 10;
-        else if ( strNum1.contains("2") || strNum1.contains("3") ||  strNum1.contains("4") ||  strNum1.contains("5") ||  strNum1.contains("6") ||  strNum1.contains("7"))
+        else if (strNum1.contains("2") || strNum1.contains("3") || strNum1.contains("4") || strNum1.contains("5") || strNum1.contains("6") || strNum1.contains("7"))
             typeFlag = 8;
-        else if ( strNum1.contains("0") ||  strNum1.contains("1"))
+        else if (strNum1.contains("0") || strNum1.contains("1"))
             typeFlag = 2;
     }
 
@@ -1288,7 +1289,7 @@ public class MainActivity extends AppCompatActivity
     public void dialogComment(String cnt) {
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setCancelable(false);   //нельзя
-        adb.setMessage(getString(R.string.dialogCommentStr));
+        adb.setMessage(getString(R.string.textCommentStr));
         adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -1315,18 +1316,18 @@ public class MainActivity extends AppCompatActivity
     public void dialogDevelopers() {
         final String[] developers = {getString(R.string.developer), getString(R.string.painter)};
         AlertDialog.Builder adb = new AlertDialog.Builder(this);
-        adb.setTitle(getString(R.string.developers));
+        adb.setTitle(getString(R.string.navBtnDevelopers));
         adb.setIcon(android.R.drawable.ic_dialog_info);
         adb.setItems(developers, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
                 switch (item) {
                     case 0:
-                        sendMailForDev("Matatov1989@gmail.com");
+                                 sendMailForDev("Matatov1989@gmail.com");
                         dialog.dismiss();
                         break;
                     case 1:
-                        sendMailForDev("Docmat63@gmail.com");
+                                  sendMailForDev("Docmat63@gmail.com");
                         dialog.dismiss();
                         break;
                 }
@@ -1372,25 +1373,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     //dialog about program
-    public void dialogAboutProgram() {
+    public void dialogManual() {
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         adb.setCancelable(false);   //нельзя
         adb.setTitle(R.string.app_name);
-        adb.setMessage(R.string.strAboutProgram);
+        adb.setMessage(getText(R.string.textAboutProgram)  + "\n" + getText(R.string.textVersion));
         adb.setIcon(R.mipmap.ic_launcher);
-        adb.setPositiveButton(R.string.btnEstimate, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                sendComment();
-                dialog.dismiss();
-            }
-        });
-        adb.setNeutralButton(R.string.developers, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialogDevelopers();
-                dialog.dismiss();
-            }
-        });
-        adb.setNegativeButton(R.string.btnCancel, new DialogInterface.OnClickListener() {
+        adb.setPositiveButton(R.string.btnOK, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
@@ -1585,8 +1574,7 @@ public class MainActivity extends AppCompatActivity
         else if (drawer.isDrawerOpen(GravityCompat.START) && slidingDrawer.isOpened()) {
             drawer.closeDrawer(GravityCompat.START);
             slidingDrawer.animateClose();
-        }
-        else {
+        } else {
             super.onBackPressed();
             moveTaskToBack(true);
             exit(0);
@@ -1597,39 +1585,69 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.nav_set_dec:
+                if (navCheckDec.isChecked())
+                    navCheckDec.setChecked(false);
+                else
+                    navCheckDec.setChecked(true);
+                break;
 
-        if (id == R.id.nav_set_dec) {
-            if (navCheckDec.isChecked())
-                navCheckDec.setChecked(false);
-            else
-                navCheckDec.setChecked(true);
-        } else if (id == R.id.nav_set_hex) {
-            if (navCheckHex.isChecked())
-                navCheckHex.setChecked(false);
-            else
-                navCheckHex.setChecked(true);
-        } else if (id == R.id.nav_set_bin) {
-            if (navCheckBin.isChecked())
-                navCheckBin.setChecked(false);
-            else
-                navCheckBin.setChecked(true);
-        } else if (id == R.id.nav_set_oct) {
-            if (navCheckOct.isChecked())
-                navCheckOct.setChecked(false);
-            else
-                navCheckOct.setChecked(true);
-        } else if (id == R.id.nav_tables_logic_operations) {
-            dialogTablesLogicOperations();
-        } else if (id == R.id.nav_number_system_table) {
-            dialogNumberSystemTable();
-        } else if (id == R.id.nav_advise_friend) {
-            adviseFriend();
-        } else if (id == R.id.nav_about_program) {
-            dialogAboutProgram();
-        } else if (id == R.id.nav_from_developer) {
-            fromDevelopers();
+            case R.id.nav_set_hex:
+                if (navCheckHex.isChecked())
+                    navCheckHex.setChecked(false);
+                else
+                    navCheckHex.setChecked(true);
+                break;
+
+            case R.id.nav_set_bin:
+                if (navCheckBin.isChecked())
+                    navCheckBin.setChecked(false);
+                else
+                    navCheckBin.setChecked(true);
+                break;
+
+            case R.id.nav_set_oct:
+                if (navCheckOct.isChecked())
+                    navCheckOct.setChecked(false);
+                else
+                    navCheckOct.setChecked(true);
+                break;
+
+            case R.id.nav_tables_logic_operations:
+                dialogTablesLogicOperations();
+                break;
+
+            case R.id.nav_number_system_table:
+                dialogNumberSystemTable();
+                break;
+
+            case R.id.nav_advise_friend:
+                adviseFriend();
+                break;
+
+            case R.id.nav_manual:
+                dialogManual();
+                break;
+
+            case R.id.nav_from_developer:
+                fromDevelopers();
+                break;
+
+            case R.id.nav_developers:
+                dialogDevelopers();
+                break;
+
+            case R.id.nav_from_feedback:
+                sendComment();
+                break;
+
+            case R.id.nav_donations:
+                Toast.makeText(this, "Thanks!!!",Toast.LENGTH_SHORT).show();
+                break;
+
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
