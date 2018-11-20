@@ -1,11 +1,24 @@
-Assembler Calculator
-The application is designed for computing, in which you can add, subtract, multiply and divide decimal, hexadecimal, octal and binary numbers. At the end of the number is the appropriate letter indicating the type of input. 
-Designations types of numbers: 
-	b - binary; 
-	o - octal; 
-	d - decimal; 
-	h - hexadecimal;
-Mathematical operations can be performed as one, and for different types of numbers. The results are displayed in four versions, in: decimal, hexadecimal, octal and binary number systems. 
-In the navigation bar, choice of output provided answers. In addition to mathematical operations and provides logical operations XOR, OR, AND and NOT. In the navigation bar, in addition to the instructions in the help of logical operations there are tables and table number systems.   
+# Assembler Calculator #
 
-Thanks for the support and Enjoy using!
+---
+
+The application is designed for computer computing, in which you can add, subtract, multiply, divide and perform logical operations (XOR, OR, AND and NOT) with decimal, hexadecimal, octal and binary numbers. At the end of the number is a letter indicating the type of input number.
+
+Designations of types of numbers:
+* b - binary;
+* o - octal;
+* d - decimal;
+* h - hexadecimal;
+
+Can be performed mathematical and logical operations, how for one, and for different types of numbers. The result is displayed in four variants, in decimal, hexadecimal, octal and binary number systems. The navigation bar provides a choice of displaying answers.
+For help in the navigation bar, in addition to the instructions, there are tables of logical operations and a table of number systems.
+
+---
+
+### Tools and Technology: ###
+* Strings function and operation
+* Image view
+* Navigation
+* personal knowledge
+
+---
