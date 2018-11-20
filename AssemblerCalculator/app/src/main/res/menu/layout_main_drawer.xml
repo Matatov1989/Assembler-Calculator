@@ -36,6 +36,11 @@
             android:icon="@drawable/nav_btn_table"
             android:title="@string/navBtnNumberSystemTable" />
 
+        <item
+            android:id="@+id/nav_manual"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/navBtnManual" />
+
     </group>
 
     <item android:title="@string/navDrawerItemCommunication">
@@ -44,10 +49,7 @@
                 android:id="@+id/nav_advise_friend"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/navBtnAdviseFriend" />
-            <item
-                android:id="@+id/nav_manual"
-                android:icon="@android:drawable/ic_menu_info_details"
-                android:title="@string/navBtnManual" />
+
             <item
                 android:id="@+id/nav_from_developer"
                 android:icon="@android:drawable/ic_menu_more"
@@ -62,12 +64,12 @@
                 android:id="@+id/nav_from_feedback"
                 android:icon="@android:drawable/btn_star_big_off"
                 android:title="@string/navBtnFeedback" />
-
+    <!--
             <item
                 android:id="@+id/nav_donations"
                 android:icon="@android:drawable/ic_menu_help"
                 android:title="@string/navBtnDonations" />
-
+    -->
         </menu>
     </item>
 </menu>

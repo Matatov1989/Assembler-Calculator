@@ -1641,11 +1641,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_from_feedback:
                 sendComment();
                 break;
-
+/*
             case R.id.nav_donations:
                 Toast.makeText(this, "Thanks!!!",Toast.LENGTH_SHORT).show();
                 break;
-
+*/
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
