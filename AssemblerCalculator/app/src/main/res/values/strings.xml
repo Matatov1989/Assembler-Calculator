@@ -36,7 +36,7 @@
     <string name="toastSendMail">Sending letter...</string>
 
     <!--text-->
-    <string name="textVersion">Version: 4.7</string>
+    <string name="textVersion">Version: 4.8</string>
     <string name="textCommentStr">If you like to use this program, please rate it in the google play market. Thank you!</string>
     <string name="textTitleTables">Tables of basic logic operations</string>
     <string name="textAboutProgram">\tThe application is designed for computing, in which you can add, subtract, multiply and divide decimal, hexadecimal, octal and binary numbers. At the end of the number is the appropriate letter indicating the type of input.\n

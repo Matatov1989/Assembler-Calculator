@@ -6,39 +6,39 @@
         <item android:title="@string/navigationTitle" />
         <item
             android:id="@+id/nav_set_dec"
-            android:icon="@drawable/nav_btn_dec"
+            android:icon="@drawable/ic_dec"
             android:title="@string/navBtnDec"
             app:actionLayout="@layout/element_nav_chech_dec" />
         <item
             android:id="@+id/nav_set_hex"
-            android:icon="@drawable/nav_btn_hex"
+            android:icon="@drawable/ic_hex"
             android:title="@string/navBtnHex"
             app:actionLayout="@layout/element_nav_check_hex" />
         <item
             android:id="@+id/nav_set_oct"
-            android:icon="@drawable/nav_btn_oct"
+            android:icon="@drawable/ic_oct"
             android:title="@string/navBtnOct"
             app:actionLayout="@layout/element_nav_check_bin" />
 
         <item
             android:id="@+id/nav_set_bin"
-            android:icon="@drawable/nav_btn_bin"
+            android:icon="@drawable/ic_bin"
             android:title="@string/navBtnBin"
             app:actionLayout="@layout/element_nav_check_bin" />
 
         <item
             android:id="@+id/nav_tables_logic_operations"
-            android:icon="@drawable/nav_btn_table"
+            android:icon="@drawable/ic_logic_tables"
             android:title="@string/navBtnTablesLogicOperations" />
 
         <item
             android:id="@+id/nav_number_system_table"
-            android:icon="@drawable/nav_btn_table"
+            android:icon="@drawable/ic_system_table"
             android:title="@string/navBtnNumberSystemTable" />
 
         <item
             android:id="@+id/nav_manual"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/ic_manual"
             android:title="@string/navBtnManual" />
 
     </group>
@@ -47,22 +47,22 @@
         <menu>
             <item
                 android:id="@+id/nav_advise_friend"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_share"
                 android:title="@string/navBtnAdviseFriend" />
 
             <item
                 android:id="@+id/nav_from_developer"
-                android:icon="@android:drawable/ic_menu_more"
+                android:icon="@drawable/ic_more"
                 android:title="@string/navBtnFromDevelopers" />
 
             <item
                 android:id="@+id/nav_developers"
-                android:icon="@android:drawable/ic_menu_view"
+                android:icon="@drawable/ic_developers"
                 android:title="@string/navBtnDevelopers" />
 
             <item
                 android:id="@+id/nav_from_feedback"
-                android:icon="@android:drawable/btn_star_big_off"
+                android:icon="@drawable/ic_star"
                 android:title="@string/navBtnFeedback" />
     <!--
             <item
