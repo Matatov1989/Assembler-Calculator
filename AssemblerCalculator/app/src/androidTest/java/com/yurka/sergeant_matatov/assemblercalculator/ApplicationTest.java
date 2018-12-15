@@ -17,6 +17,6 @@ public class ApplicationTest  {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.sergeant_matatov.calendarclients", appContext.getPackageName());
+        assertEquals("com.yurka.sergeant_matatov.assemblercalculator", appContext.getPackageName());
     }
 }
