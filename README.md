@@ -4,7 +4,7 @@
 
 ### Video about the application on YouTube ###
 
-[![CLICK HERE TO PLAY VIDIO](http://img.youtube.com/vi/https://youtu.be/acI9A06Xzs/0.jpg)](http://www.youtube.com/watch?v=-acI9A06Xzs&t=59s)
+[![CLICK HERE TO PLAY VIDIO](http://img.youtube.com/vi/https://youtu.be/-acI9A06Xzs/0.jpg)](http://www.youtube.com/watch?v=-acI9A06Xzs&t=59s)
 			
 ---
 
