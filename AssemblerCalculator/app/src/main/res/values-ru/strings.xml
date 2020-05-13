@@ -36,7 +36,7 @@
     <string name="toastSendMail">Отправка письма...</string>
 
     <!--text-->
-    <string name="textVersion">Версия: 4.9</string>
+    <string name="textVersion">Версия: 5.0.1</string>
     <string name="textCommentStr">Если Вам нравится пользоваться этой программой, пожалуйста оцените ее в google play market. Спасибо!</string>
     <string name="textTitleTables">Таблицы основных логических операций</string>
     <string name="textAboutProgram">\tПриложение предназначено для компьютерных вычисление, в котором можно складывать, вычитать, умножать и делить десятичные, шестнадцатеричные, восьмеричные и двоичные числа. В конце числа стоит соответствующая буква обозначающая тип вводимого числа.\n

@@ -9,6 +9,7 @@
     <color name="colorRed">#ff0400</color>
     <color name="colorGreenChechBox">#008000</color>
     <color name="colorGreen">#008000</color>
+    <color name="colorGreenTransparent">#33008000</color>
     <color name="colorGreenDark">#055105</color>
     <color name="colorBlack">#010101</color>
     <color name="colorWhite">#ffffff</color>

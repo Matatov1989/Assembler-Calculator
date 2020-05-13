@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="bottom"
     android:orientation="vertical">
 
     <!-- text input  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
@@ -18,12 +19,12 @@
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:ellipsize="middle"
-            android:gravity="left"
+            android:gravity="left|top"
             android:maxLength="100"
-            android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/colorBlack"
             android:textSize="30sp"
+
             tools:ignore="EllipsizeMaxLines" />
     </LinearLayout>
 
@@ -48,9 +49,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:clickable="true"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/hexRes"
@@ -58,27 +58,24 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:clickable="true"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/octRes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#010101"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#010101" />
 
             <TextView
                 android:id="@+id/binRes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
         </LinearLayout>
 
         <!-- labels -->
@@ -95,16 +92,15 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:text=" :Dec"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/hexText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" :Hex"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp" />
 
@@ -113,18 +109,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" :Oct"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
 
             <TextView
                 android:id="@+id/binText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" :Bin"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorBlack" />
 
         </LinearLayout>
     </LinearLayout>

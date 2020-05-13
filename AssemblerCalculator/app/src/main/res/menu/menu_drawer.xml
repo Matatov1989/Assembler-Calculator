@@ -8,23 +8,23 @@
             android:id="@+id/nav_set_dec"
             android:icon="@drawable/ic_dec"
             android:title="@string/navBtnDec"
-            app:actionLayout="@layout/element_nav_chech_dec" />
+            app:actionLayout="@layout/element_check_box" />
         <item
             android:id="@+id/nav_set_hex"
             android:icon="@drawable/ic_hex"
             android:title="@string/navBtnHex"
-            app:actionLayout="@layout/element_nav_check_hex" />
+            app:actionLayout="@layout/element_check_box" />
         <item
             android:id="@+id/nav_set_oct"
             android:icon="@drawable/ic_oct"
             android:title="@string/navBtnOct"
-            app:actionLayout="@layout/element_nav_check_bin" />
+            app:actionLayout="@layout/element_check_box" />
 
         <item
             android:id="@+id/nav_set_bin"
             android:icon="@drawable/ic_bin"
             android:title="@string/navBtnBin"
-            app:actionLayout="@layout/element_nav_check_bin" />
+            app:actionLayout="@layout/element_check_box" />
 
         <item
             android:id="@+id/nav_tables_logic_operations"

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorWhite">
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <corners
+                        android:bottomLeftRadius="20dp"
+                        android:bottomRightRadius="20dp"
+                        android:radius="1000dp"
+                        android:topLeftRadius="20dp"
+                        android:topRightRadius="20dp" />
+
+                    <gradient
+                        android:angle="270"
+                        android:endColor="@color/colorWhite"
+                        android:centerColor="@color/colorGreen"
+                        android:startColor="@color/colorGreen" />
+
+                    <stroke
+                        android:width="2dip"
+                        android:color="@color/colorGreenDark" />
+                </shape>
+
+
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners
+                        android:bottomLeftRadius="20dp"
+                        android:bottomRightRadius="20dp"
+                        android:radius="1000dp"
+                        android:topLeftRadius="20dp"
+                        android:topRightRadius="20dp" />
+
+                    <gradient
+                        android:angle="90"
+                        android:centerColor="@color/colorGreen"
+                        android:endColor="@color/colorWhite"
+                        android:startColor="@color/colorGreen" />
+
+                    <stroke
+                        android:width="2dip"
+                        android:color="@color/colorGreenDark" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>
